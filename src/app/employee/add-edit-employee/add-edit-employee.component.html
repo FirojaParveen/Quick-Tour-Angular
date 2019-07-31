@@ -1,0 +1,79 @@
+<nav class="navbar no-navbar-border navbar-default">
+  <div class="container">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <a class="navbar-brand">Logo</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="/" class="btn btn-warning">Logout</a>
+      </li>
+    </ul>
+
+  </div><!-- /.container -->
+</nav>
+<div class="main-content">
+  <div class="container">
+    <h3>Add Employee</h3>
+    <form id="formNewEmployee" name="formNewEmployee">
+      <div class="form-area">
+        <fieldset>
+          <div class="form-group">
+            <label>First Name:</label><em class="danger-text h4">*</em>
+            <input type="text" class="form-control" placeholder="First Name" name="firstName" [(ngModel)]="newEmployee.firstName" required>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name:</label><em class="danger-text h4">*</em>
+            <input type="text" class="form-control" placeholder="Last Name" name="lastName" [(ngModel)]="newEmployee.lastName" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email:</label><em class="danger-text h4">*</em>
+            <input type="email" class="form-control" placeholder="Enter your email" name="email" [(ngModel)]="newEmployee.email" required>
+          </div>
+
+          <div class="form-group">
+            <label>Roll No:</label><em class="danger-text h4">*</em>
+            <input type="text" class="form-control" placeholder="Enter your roll number" name="rollNo" [(ngModel)]="newEmployee.rollNo" required>
+          </div>
+
+          <div class="mt60 text-right">
+            <button class="btn btn-secondary mr10" (click)="addEmployee()" type="button" [hidden]="isForUpdate">Add</button>
+            <button class="btn btn-secondary" (click)="updateEmployee()" [hidden]="!isForUpdate" type="button">Update</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+    <div class="mt60">
+      <div class="employee-list-title">
+        <h2>List of Employees</h2>
+      </div>
+      <div class="list-container">
+        <p *ngIf='this.employees.length === 0'> No employee has been added.<p>
+          <table class="table" *ngIf='this.employees && this.employees.length'>
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Roll No</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees ;let i= index">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.rollNo}}</td>
+                <td>
+                  <a (click)="editEmployee(i)"> <img class="mr10" src=".\assets\images\edit.png"></a>
+                  <a> <img (click)="deleteEmployee(i)" src=".\assets\images\delete.png"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+

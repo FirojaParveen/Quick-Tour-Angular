@@ -1,0 +1,183 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  color: #4D4651;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.mr0 {
+  margin-right: 0 !important;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt60 {
+  margin-top: 60px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.display-inline {
+  display: inline-block;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-control:focus {
+  border-color: #ced4da;
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.danger-text {
+  color: red;
+}
+/*Navbar*/
+.navbar {
+  background-color: #343a40 !important;
+}
+
+  .navbar a {
+    color: #fff;
+  }
+
+    .navbar a:not([href]):not([tabindex]) {
+      color: #fff;
+    }
+
+  .navbar .list-link {
+    background-color: #fff;
+    color: #4D4651;
+    padding: 10px;
+    border: 1px solid #4D4651;
+    border-radius: 4px;
+  }
+
+.main-content {
+  padding: 20px 0;
+}
+
+/*Employee login form*/
+.employee-form {
+  width: 700px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #4D4651;
+}
+
+  .employee-form h3 {
+    text-align: center;
+    margin: 15px 0 20px;
+  }
+
+  .employee-form .form-container {
+    padding: 20px;
+    border: 1px solid #ededed;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+  }
+
+    .employee-form .form-container .form-group {
+      padding: 4px 0;
+    }
+
+      .employee-form .form-container .form-group.inline-field {
+        width: 48%;
+        display: inline-block;
+        margin-right: 20px;
+        ;
+      }
+
+      .employee-form .form-container .form-group label {
+        font-weight: 600;
+      }
+
+      .employee-form .form-container .form-group .checkbox-span span, .employee-form .form-container .form-group .radio-span span {
+        margin-left: 10px;
+        margin-right: 20px;
+        vertical-align: text-bottom;
+      }
+
+input[type=checkbox], input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+
+.employee-form .form-container .btn-box .btn-warning {
+  min-width: 170px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.employee-form .form-container .btn-box {
+  text-align: center;
+}
+
+/*Employee List*/
+.list-container {
+  padding: 20px;
+  border: 1px solid #ededed;
+  min-height: 400px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.table {
+  color: #4D4651;
+}
+
+.list-container table td, .list-container table th {
+  border: none !important;
+}
+
+/*add employee form*/
+.form-area {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px;
+  min-height: 400px;
+  background-color: #f9f9f9;
+}
+
+  .form-area .cancel-btn {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  .form-area .btn {
+    min-width: 120px;
+    padding: 8px;
+  }
+
+  .form-area .cancel-btn:hover, .form-area .cancel-btn:focus {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
